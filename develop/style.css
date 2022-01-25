@@ -64,11 +64,14 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06aed5;
+    background-color: #05022c;
     color: grey;
     position:relative;
     left:20%;
-    padding:2px;
+    height:100%;
+    padding:31px;
+    margin-left:-19px;
+    font-size:23px;
   }
   
   .saveBtn i:hover {
@@ -79,4 +82,15 @@ body {
   .header-center {
     text-align: center;
   }
+
+  .input-box {
+    padding:23px;
+    background-color: rgba(31, 22, 24, 0.692);
+    color:white;
+    font-family: monospace monospace;
+    font-size:12px;
+    opacity:50%;
+    border-radius:10px;
+  }
+
 
