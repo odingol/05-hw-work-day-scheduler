@@ -83,7 +83,7 @@ function saveInput() {
 saveButton.on('click', function (event) {
 
     event.preventDefault();
-    window.alert('Note was Saved!');
+    swal("Success", "Note was Saved!", "success");
     console.log(event.target)
     saveInput();
     getInput();
@@ -118,15 +118,11 @@ var textBox = $('.input-box');
 var presentHour = moment().format('H') //'H' is what displays time as military time as opposed to 'h' where is uses standard time //
 
 
-// Time block Variables
-
-// const time9 = $('#9');
-// const time10 = $('#10');
 
 
 
 
-// Past Function
+// Past, Present, and Future Function(s)
 
 function pastTime() {
     for(var pre = presentHour -1; pre >= 9; pre-- ) {
@@ -135,6 +131,7 @@ function pastTime() {
         }
     }
 }
+
 
 function currentTime() {
     if(presentHour >= 9 && presentHour <= 17) {
