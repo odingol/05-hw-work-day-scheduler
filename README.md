@@ -41,6 +41,10 @@ The following animation demonstrates the application's functionality
 
 <br><br>
 
+![applicationgif](develop/images/work-day-planner.gif)
+
+<br><br>
+
 ## What I Accomplished
 
 <br>
