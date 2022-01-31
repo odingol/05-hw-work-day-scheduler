@@ -8,7 +8,7 @@ var headerDate = $('#currentDay').text(today.format('dddd, LL'));
 
 // Text Area Variables
 
-var inputText = $('textarea[name="input-box"]');
+var inputText = $('textarea[name="input-box1"]');
 var inputText2 = $('textarea[name="input-box2"]');
 var inputText3 = $('textarea[name="input-box3"]');
 var inputText4 = $('textarea[name="input-box4"]');
@@ -32,30 +32,39 @@ var save1 = $('#save1');
 // Logging & saving text to Textarea
 
 
-function getInput() {
+function saveInput(target) {
 
-
-    var inputField = {
     
-        inputText: inputText.val(),
-        inputText2: inputText2.val(),
-        inputText3: inputText3.val(),
-        inputText4: inputText4.val(),
-        inputText5: inputText5.val(),
-        inputText6: inputText6.val(),
-        inputText7: inputText7.val(),
-        inputText8: inputText8.val(),
-        inputText9: inputText9.val(),
+    var inputValue = JSON.parse(localStorage.getItem('text')) || {};
+    var saveNote = "";
+    const buttonIndex = target.id.split('save')[1]; // save4 -> ["" , "4"] -> "4"
+    
+    if (target){
+        saveNote = $(`textarea[name="input-box${buttonIndex}"]`).val()
+        console.log(saveNote)
+        inputValue[`inputText${buttonIndex == 1 ? "" : buttonIndex}`] = saveNote
+    }
+    // var inputField = {
+    
+    //     inputText: inputText.val(),
+    //     inputText2: inputText2.val(),
+    //     inputText3: inputText3.val(),
+    //     inputText4: inputText4.val(),
+    //     inputText5: inputText5.val(),
+    //     inputText6: inputText6.val(),
+    //     inputText7: inputText7.val(),
+    //     inputText8: inputText8.val(),
+    //     inputText9: inputText9.val(),
 
-    };
+    // };
 
-    localStorage.setItem('text', JSON.stringify(inputField));
+    localStorage.setItem('text', JSON.stringify(inputValue));
 
 }
 
 
 
-function saveInput() {
+function getInput() {
 
 
     var inputValue = JSON.parse(localStorage.getItem('text'));
@@ -83,10 +92,10 @@ function saveInput() {
 saveButton.on('click', function (event) {
 
     event.preventDefault();
-    swal("Success", "Note was Saved!", "success");
     console.log(event.target)
-    saveInput();
+    saveInput(event.target);
     getInput();
+    swal("Success", "Note was Saved!", "success");
 
 });
 
@@ -96,7 +105,7 @@ saveButton.on('click', function (event) {
 
 function maintain() {
     // When the function maintain runs so will the code insidde saveInput 
-    saveInput();
+    getInput();
 }
 
 maintain();

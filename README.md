@@ -39,9 +39,9 @@ SO THAT I can manage my time effectively
 <br>
 The following animation demonstrates the application's functionality
 
-<br><br>
+<br>
 
-![applicationgif](develop/images/work-day-planner.gif)
+![Application Gif](develop/images/work-day-planner.gif)
 
 <br><br>
 
@@ -73,4 +73,8 @@ The following animation demonstrates the application's functionality
 
 
 ## External Links
+
+[Deployed Application]()
+
+[Git Hub Repository]()
 
