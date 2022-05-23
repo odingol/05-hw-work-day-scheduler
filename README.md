@@ -1,4 +1,4 @@
-# 05-hw-work-day-scheduler
+# work-day-scheduler
 
 ## My Task
 
