@@ -41,7 +41,7 @@ The following animation demonstrates the application's functionality
 
 <br><br>
 
-![Application Gif](develop/images/work-day-planner.gif)
+![Application Gif](images/work-day-planner.gif)
 
 <br><br>
 
