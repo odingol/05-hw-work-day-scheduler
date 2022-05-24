@@ -74,7 +74,7 @@ The following animation demonstrates the application's functionality
 
 ## External Links
 
-[Deployed Application](https://odingol.github.io/05-hw-work-day-scheduler/develop)
+[Deployed Application](https://meek-axolotl-b89c25.netlify.app)
 
 [Git Hub Repository](https://github.com/odingol/05-hw-work-day-scheduler.git)
 
